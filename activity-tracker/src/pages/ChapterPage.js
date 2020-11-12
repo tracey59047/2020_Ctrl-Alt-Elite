@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     }
 });
 
-function ChapterPage()
+function ChapterPage(chapterInfo)
 {
     const classes = useStyles();
     const [value, setValue] = useState(0);
@@ -49,7 +49,7 @@ function ChapterPage()
 
     return(
         <>
-        <h1>Other things above here</h1>
+        <h1>Chapter / oStem at Auburn</h1>
         <AppBar position="static">
         <Tabs value={value} className={classes.tabs} onChange={handleChange}>
             <Tab className={classes.tabs} label="Profile" />
@@ -67,49 +67,49 @@ function ChapterPage()
                             <h5 className={classes.grid}>Chapter Name </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>oSTEM at Auburn</h5>
+                            <h5 className={classes.grid}>{chapterInfo.id}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Institution Name </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>Auburn University</h5>
+                            <h5 className={classes.grid}>{chapterInfo.institution}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Chapter Type </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>University</h5>
+                            <h5 className={classes.grid}>{chapterInfo.type}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Region </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>C</h5>
+                            <h5 className={classes.grid}>{chapterInfo.region}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Status</h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>Active</h5>
+                            <h5 className={classes.grid}>{chapterInfo.status}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Official Email Address </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>auburn@chapters.ostem.org</h5>
+                            <h5 className={classes.grid}>{chapterInfo.email}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Alternate Email Address </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>auburnostem@gmail.com</h5>
+                            <h5 className={classes.grid}>{chapterInfo.altemail}</h5>
                         </Grid>
                         <Grid item xs={3}>
                             <h5 className={classes.grid}>Phone Number </h5>
                         </Grid> 
                         <Grid item xs={9}>
-                            <h5 className={classes.grid}>3344197937</h5>
+                            <h5 className={classes.grid}>{chapterInfo.phone}</h5>
                         </Grid>
                     </Grid>
                 </CardContent>

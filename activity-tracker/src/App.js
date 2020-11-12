@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import ChapterPage from './pages/ChapterPage'
+import AllChaptersPage from './pages/AllChaptersPage'
 
 function App() {
   return (
     <>
-      <ChapterPage />
+      <AllChaptersPage />
     </>
   );
 }
