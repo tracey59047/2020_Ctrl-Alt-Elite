@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Card, CardContent, Grid, Button, Link} from '@material-ui/core';
 import ostemImage from '../resources/ostem-logo.png';
 import ChapterPage from './ChapterPage';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const useStyles = makeStyles({
     card: {
@@ -19,6 +20,13 @@ const useStyles = makeStyles({
     button: {
         float: 'right',
         margin: '8px'
+    },
+
+    grid: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        margin: '5px'
     }
 });
 
@@ -52,7 +60,7 @@ export default function GetChapters()
             return(
             <Grid item xs={3}>
             <Card className={classes.card}>
-                <Link onClick={() => displayPage(info)}>
+                <Link onClick={() => displayPage(info)} style={{textDecoration: 'none'}}>
                 <CardContent>
                     <div align="center">
                         <img src={ostemImage} className={classes.ostemImage} alt="oSTEM" />
@@ -74,7 +82,16 @@ export default function GetChapters()
     {
         return (
             <>
-            <Link onClick={() => displayHome()}><h1> {"<- Back"}</h1></Link>
+            <Link onClick={() => displayHome()} style={{textDecoration: 'none'}}>
+                <Grid container >
+                    <Grid item className={classes.grid}>
+                        <ArrowBackIcon />
+                    </Grid>
+                    <Grid item className={classes.grid}>
+                        <h1 style={{marginTop:"0px", marginBottom:"0px"}}> {"Back"}</h1>
+                    </Grid> 
+                </Grid>
+            </Link>
             <hr />
             <ChapterPage props={currentChapterInfo} />
             </>
