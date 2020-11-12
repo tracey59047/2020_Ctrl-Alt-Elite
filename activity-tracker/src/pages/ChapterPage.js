@@ -38,8 +38,10 @@ const useStyles = makeStyles({
     }
 });
 
-function ChapterPage(chapterInfo)
+function ChapterPage(props)
 {
+    const chapterInfo = props.props;
+
     const classes = useStyles();
     const [value, setValue] = useState(0);
 
@@ -49,7 +51,7 @@ function ChapterPage(chapterInfo)
 
     return(
         <>
-        <h1>Chapter / oStem at Auburn</h1>
+        <h1>Chapter / {chapterInfo.id}</h1>
         <AppBar position="static">
         <Tabs value={value} className={classes.tabs} onChange={handleChange}>
             <Tab className={classes.tabs} label="Profile" />
