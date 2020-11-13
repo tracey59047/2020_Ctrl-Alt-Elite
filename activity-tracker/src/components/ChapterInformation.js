@@ -1,5 +1,3 @@
-import react from 'react';
-
 const chapterInfo = [
     {
         id: 'oSTEM at Auburn',
@@ -9,7 +7,8 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        handle: 'auburn_ostem'
     },
 
     {
@@ -20,7 +19,8 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        handle: 'ostemok'
     },
     
     {
@@ -31,7 +31,8 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        handle: 'auburn_ostem'
     },
 
     {
@@ -42,7 +43,8 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        handle: 'auburn_ostem'
     },
 
 ]

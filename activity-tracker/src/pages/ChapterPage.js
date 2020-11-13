@@ -102,13 +102,35 @@ const useStyles = makeStyles({
 function ChapterPage(props)
 {
     const chapterInfo = props.props;
+    const site = "http://localhost:9000/instagram"
 
     const classes = useStyles();
     const [value, setValue] = useState(0);
+    const [url, setUrl] = useState();
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    useEffect(() => {
+
+        async function getSite()
+        {
+            return await fetch(site, 
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({'handle': chapterInfo.handle})
+            }).then((response) => response.json());
+        }
+
+        getSite().then((response) => {
+            setUrl(response);
+        });
+        
+    }, [chapterInfo.handle]);
 
 
     return(
@@ -129,12 +151,11 @@ function ChapterPage(props)
             </Card>
         </TabPanel>
         <TabPanel value={value} index={1}>
-            Item Two
+            <Card className={classes.card}>
+            </Card>
         </TabPanel>
         <TabPanel value={value} index={2}>
-            <embed src={"https://www.instagram.com/ouaises/"} type="text/html" width="20%" height="500">
-
-            </embed>
+            {url !== undefined ? <iframe src={url.website + "embed/"} title="Instagram" width="20%" height="530"> </iframe> : null}
         </TabPanel>
         </>
     );
