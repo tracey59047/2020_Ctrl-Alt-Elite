@@ -55,6 +55,9 @@ export default function GetChapters()
     return(
         <>
         <h1 align="center"> Chapters </h1>
+        <div align="center">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1LJMInTc2iQatT7EVTWRZUvVyNq78YKWe" width="640" height="480"></iframe>
+        </div>
         <Grid container>
         {chapterInfo.map((info) => {
             return(
