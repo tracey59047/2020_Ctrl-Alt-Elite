@@ -8,7 +8,11 @@ const chapterInfo = [
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
         phone: '3344197937',
-        handle: 'auburn_ostem'
+        handle: 'auburn_ostem',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
 
     {
@@ -20,7 +24,11 @@ const chapterInfo = [
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
         phone: '3344197937',
-        handle: 'ostemok'
+        handle: 'ostemok',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
     
     {
@@ -32,7 +40,11 @@ const chapterInfo = [
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
         phone: '3344197937',
-        handle: 'auburn_ostem'
+        handle: 'auburn_ostem',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
 
     {
@@ -44,7 +56,11 @@ const chapterInfo = [
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
         phone: '3344197937',
-        handle: 'auburn_ostem'
+        handle: 'auburn_ostem',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
 
 ]

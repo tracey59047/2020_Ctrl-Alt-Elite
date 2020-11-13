@@ -14,22 +14,30 @@ router.post('/', function(req, res) {
     var website = "https://www.instagram.com/" + req.body.handle + "/";
     res.setHeader('Content-Type', 'application/json');
 
-    getData(website).then(function(result) {
+    getDataEmbed(website).then(function(result) {
         console.log(result);
-        res.send(JSON.stringify({website: result}))
+        const re = /(\S+ \d+, \d\d\d\d)/
+        res.send(JSON.stringify({website: result[0], day: result[1].match(re)[1]}))
     });
 });
 
-function getData(website)
+function getDataEmbed(website)
 {
     nightmare = new Nightmare({show:true});
     
     return nightmare.goto(website)
     .evaluate(() => {
+        var results = []
         if(document.querySelector('.v1Nh3.kIKUG._bz0w').innerHTML !== null)
         {
-            return document.querySelector('.v1Nh3.kIKUG._bz0w a').href;
+            results.push(document.querySelector('.v1Nh3.kIKUG._bz0w a').href);
         }
+        if(document.querySelector('img.FFVAD') !== null)
+        {
+            results.push(document.querySelector('img.FFVAD').alt);
+        }
+
+        return results;
     }).end();
 }
 
