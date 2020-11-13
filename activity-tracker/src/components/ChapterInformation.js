@@ -9,7 +9,11 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
 
     {
@@ -20,7 +24,11 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
     
     {
@@ -31,7 +39,11 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
 
     {
@@ -42,7 +54,11 @@ const chapterInfo = [
         status: 'Active',
         email: 'auburn@chapters.ostem.org',
         altemail: 'auburnostem@gmail.com',
-        phone: '3344197937'
+        phone: '3344197937',
+        pres: 'Brodie',
+        vp: 'Finn',
+        treas: 'Krisha',
+        advisor: 'Tracey'
     },
 
 ]
