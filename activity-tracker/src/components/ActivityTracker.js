@@ -51,7 +51,6 @@ const useStyles = makeStyles({
 export default function Profile(props)
 {
     const classes = useStyles();
-    const chapterInfo = props.chapterInfo;
     const instagram = props.instagram;
 
     return (
@@ -130,7 +129,7 @@ export default function Profile(props)
                         <CardContent>
                             <h5>Example Facebook Post</h5>
                             <div align="center">
-                                <img src={fbimage} width="100%"/>
+                                <img src={fbimage} width="100%" alt="Facebook Post"/>
                             </div>
                         </CardContent>
                     </Card>

@@ -9,8 +9,32 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 const useStyles = makeStyles({
     card: {
         width: '80%',
-        marginTop: '1%',
+        marginTop: '2%',
         margin: "auto"
+    },
+
+    map: {
+        width: '50%',
+        height: '50%',
+        marginTop: '1%',
+        marginBottom: '1%',
+        margin: "auto",
+    },
+
+    iframecontainer: {
+        position: 'relative',
+        width: '100%',
+        paddingTop: '60%'
+    },
+
+    iframe: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        width: '100%',
+        height: '100%',
     },
 
     ostemImage: {
@@ -55,9 +79,13 @@ export default function GetChapters()
     return(
         <>
         <h1 align="center"> Chapters </h1>
-        <div align="center">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1LJMInTc2iQatT7EVTWRZUvVyNq78YKWe" title="Google Maps" width="640" height="480"></iframe>
-        </div>
+        <Card className={classes.map}>
+            <CardContent>
+                <div align="center" className={classes.iframecontainer}>
+                    <iframe className={classes.iframe} src="https://www.google.com/maps/d/embed?mid=1LJMInTc2iQatT7EVTWRZUvVyNq78YKWe" frameborder="0" title="Google Maps"></iframe>
+                </div>
+            </CardContent>
+        </Card>
         <Grid container>
         {chapterInfo.map((info) => {
             return(

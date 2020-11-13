@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {AppBar, Tabs, Tab, Card, CardContent, Grid} from '@material-ui/core';
+import {AppBar, Tabs, Tab} from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 import Profile from '../components/Profile'
 import Leadership from '../components/Leadership'
