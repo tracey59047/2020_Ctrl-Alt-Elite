@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {AppBar, Tabs, Tab, Card, CardContent, Grid} from '@material-ui/core';
+import {AppBar, Tabs, Tab, Card, CardContent, Grid, Paper} from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 
 function TabPanel(props)
@@ -28,54 +28,104 @@ function Profile(props)
             <h2>Chapter Information</h2>
             <Grid container spacing={0}>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Chapter Name </h5>
+                    <h4 className={classes.grid}>Chapter Name </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.id}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.id}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Institution Name </h5>
+                    <h4 className={classes.grid}>Institution Name </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.institution}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.institution}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Chapter Type </h5>
+                    <h4 className={classes.grid}>Chapter Type </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.type}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.type}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Region </h5>
+                    <h4 className={classes.grid}>Region </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.region}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.region}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Status</h5>
+                    <h4 className={classes.grid}>Status</h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.status}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.status}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Official Email Address </h5>
+                    <h4 className={classes.grid}>Official Email Address </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.email}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.email}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Alternate Email Address </h5>
+                    <h4 className={classes.grid}>Alternate Email Address </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.altemail}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.altemail}</subtitle1>
                 </Grid>
                 <Grid item xs={3}>
-                    <h5 className={classes.grid}>Phone Number </h5>
+                    <h4 className={classes.grid}>Phone Number </h4>
                 </Grid>
                 <Grid item xs={9}>
-                    <h5 className={classes.grid}>{chapterInfo.phone}</h5>
+                    <subtitle1 className={classes.grid}>{chapterInfo.phone}</subtitle1>
                 </Grid>
             </Grid>
+    </>);
+}
+
+function Leadership(props)
+{
+    const classes = useStyles();
+    const chapterInfo = props.chapterInfo;
+
+    return (
+        <>
+            <h2>Leadership</h2>
+            <Grid container spacing={2} classesName={classes.root}>
+                <Grid item xs={6} classesName={classes.root} >
+                    <Card >
+                        <CardContent>
+                        <Grid id = "top-row" align = "center"><h4 >President </h4></Grid>
+                        <Grid id = "middle-row" align = "center"><subtitle1 >{chapterInfo.pres}</subtitle1></Grid>
+                        <Grid id = "bottom-row" align = "center"><subtitle1 >{chapterInfo.email}</subtitle1></Grid>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={6} classesName={classes.root}>
+                    <Card >
+                        <CardContent>
+                        <Grid id = "top-row" align = "center"><h4 >Advisor </h4></Grid>
+                        <Grid id = "middle-row" align = "center"><subtitle1 >{chapterInfo.advisor}</subtitle1></Grid>
+                        <Grid id = "bottom-row" align = "center"><subtitle1 >{chapterInfo.email}</subtitle1></Grid>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={6} classesName={classes.root}>
+                    <Card >
+                        <CardContent>
+                        <Grid id = "top-row" align = "center"><h4 >Vice President </h4></Grid>
+                        <Grid id = "middle-row" align = "center"><subtitle1 >{chapterInfo.vp}</subtitle1></Grid>
+                        <Grid id = "bottom-row" align = "center"><subtitle1 >{chapterInfo.email}</subtitle1></Grid>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={6} classesName={classes.root}>
+                    <Card >
+                        <CardContent>
+                        <Grid id = "top-row" align = "center"><h4 >Treasurer </h4></Grid>
+                        <Grid id = "middle-row" align = "center"><subtitle1 >{chapterInfo.treas}</subtitle1></Grid>
+                        <Grid id = "bottom-row" align = "center"><subtitle1 >{chapterInfo.email}</subtitle1></Grid>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
+            
     </>);
 }
 
@@ -129,7 +179,11 @@ function ChapterPage(props)
             </Card>
         </TabPanel>
         <TabPanel value={value} index={1}>
-            Item Two
+            <Card className={classes.card}>
+                <CardContent>
+                    <Leadership chapterInfo={chapterInfo} />
+                </CardContent>
+            </Card>
         </TabPanel>
         <TabPanel value={value} index={2}>
             <embed src={"https://www.instagram.com/ouaises/"} type="text/html" width="20%" height="500">

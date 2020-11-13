@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import chapterInfo from '../components/ChapterInformation';
 import { makeStyles } from '@material-ui/core/styles';
-import {Card, CardContent, Grid, Button, Link} from '@material-ui/core';
+import {Card, CardContent, Grid, Button, Link, CardActions, Box} from '@material-ui/core';
 import ostemImage from '../resources/ostem-logo.png';
 import ChapterPage from './ChapterPage';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -69,8 +69,14 @@ export default function GetChapters()
                         <img src={ostemImage} className={classes.ostemImage} alt="oSTEM" />
                     </div>
                     <h2 align="center">{info.id}</h2>
-                    <Button variant ="contained" className={classes.button} color="primary"> View </Button>
+                    
                 </CardContent>
+                    <CardActions>
+                        <Box mx = "auto">
+                            <Button style={{justifyContent: 'center'}} variant ="contained" className={classes.button} color="primary"> 
+                                View </Button>
+                        </Box>
+                    </CardActions>
                 </Link>
             </Card>
             </Grid>)
