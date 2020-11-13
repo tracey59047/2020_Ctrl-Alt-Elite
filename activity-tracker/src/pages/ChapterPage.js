@@ -3,6 +3,7 @@ import {AppBar, Tabs, Tab, Card, CardContent, Grid} from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 import Profile from '../components/Profile'
 import Leadership from '../components/Leadership'
+import ActivityTracker from '../components/ActivityTracker'
 
 function TabPanel(props)
 {
@@ -86,24 +87,13 @@ function ChapterPage(props)
         </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
-            <Card className={classes.card}>
-                <CardContent>
-                    <Profile chapterInfo={chapterInfo} />
-                </CardContent>
-            </Card>
+            <Profile chapterInfo={chapterInfo} />
         </TabPanel>
-        <TabPanel value={value} index={1}>
-            <Card className={classes.card}>
-                <CardContent>
-                    <Leadership chapterInfo={chapterInfo} />
-                </CardContent>
-            </Card>
+        <TabPanel value={value} index={1}>  
+            <Leadership chapterInfo={chapterInfo} />
         </TabPanel>
-        <TabPanel value={value} index={2}>
-            {instagram !== undefined ? 
-                <>
-                <iframe src={instagram.website + "embed/"} title="Instagram" width="20%" height="530"> </iframe> 
-                <h1>{instagram.day}</h1></> : null}
+        <TabPanel value={value} index={2}> 
+            {instagram !== undefined ? <ActivityTracker chapterInfo={chapterInfo} instagram={instagram} /> : null}
         </TabPanel>
         </>
     );

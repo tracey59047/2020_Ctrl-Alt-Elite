@@ -29,6 +29,8 @@ export default function Leadership(props)
 
     return (
         <>
+            <Card className={classes.card}>
+            <CardContent>
             <h2>Leadership</h2>
             <Grid container spacing={2} classesName={classes.root}>
                 <Grid item xs={6} classesName={classes.root} >
@@ -68,6 +70,7 @@ export default function Leadership(props)
                     </Card>
                 </Grid>
             </Grid>
-            
+            </CardContent>
+            </Card>
     </>);
 }

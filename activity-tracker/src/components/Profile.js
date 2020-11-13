@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid} from '@material-ui/core';
+import {Card, CardContent, Grid} from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -29,6 +29,8 @@ export default function Profile(props)
 
     return (
         <>
+            <Card className={classes.card}>
+                <CardContent>
             <h2>Chapter Information</h2>
             <Grid container spacing={0}>
                 <Grid item xs={3}>
@@ -80,5 +82,7 @@ export default function Profile(props)
                     <h5 className={classes.grid}>{chapterInfo.phone}</h5>
                 </Grid>
             </Grid>
+            </CardContent>
+            </Card>
     </>);
 }
