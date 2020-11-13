@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {AppBar, Tabs, Tab, Card, CardContent, Grid} from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 import Profile from '../components/Profile'
+import Leadership from '../components/Leadership'
 
 function TabPanel(props)
 {
@@ -93,6 +94,9 @@ function ChapterPage(props)
         </TabPanel>
         <TabPanel value={value} index={1}>
             <Card className={classes.card}>
+                <CardContent>
+                    <Leadership chapterInfo={chapterInfo} />
+                </CardContent>
             </Card>
         </TabPanel>
         <TabPanel value={value} index={2}>
